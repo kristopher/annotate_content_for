@@ -1,6 +1,6 @@
 = Annotate Content For
   
-Annotates content_for includes with html comments containing the name, file and line number. 
+Annotates content_for captures with html comments containing the name, file and line number. 
   
 == Example
 
