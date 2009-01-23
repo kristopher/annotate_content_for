@@ -1,0 +1,28 @@
+= Annotate Content For
+  
+Annotates content_for includes with html comments containing the name, file and line number. 
+  
+== Example
+
+Note: Annotation is only added when in the development environment.
+
+Say you have something like this in app/view/people/index.html.erb
+
+  <% content_for :head do %>
+    Some Content
+  <% end %>
+  
+"Some Content" would be annotated something like this.
+  
+  <!-- START content_for(head) from: /rails_project/app/views/people/index.html.erb:18:in `_run_erb_app47views47people47index46html46erb' -->
+    Some Content
+  <!-- END content_for(head) from: /rails_project/app/views/people/index.html.erb:18:in `_run_erb_app47views47people47index46html46erb' -->
+
+To include a content_for block without annotation.
+
+  <% content_for_without_annotation :scripts do %>
+    Some Content
+  <% end %>
+
+Homepage:: http://github.com/kristopher/ajaxparty
+License:: Copyright (c) 2008 Kristopher Chambers <maito:kristopher.chambers@gmail.com> and Elijah Miller <mailto:elijah.miller@gmail.com>, released under the MIT license
