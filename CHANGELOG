@@ -1,3 +1,4 @@
 v0.0.1 Initial Release
 v1.0.0 Adds a content_for note if rails-footnotes plugin is being used.
 v1.0.1 Removing Automatic including of the content_for_note.
+v1.0.2 I've decided to move the content_for_note into its own plugin.

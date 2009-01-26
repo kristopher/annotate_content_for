@@ -1,12 +1,4 @@
-module ActionView
-
-  class Base        
-    def content_for_callers
-      @content_for_callers ||= []
-    end  
-  end
-
-  module Helpers::CaptureHelper
+module ActionView::Helpers::CaptureHelper
   
     def content_for_with_annotation(name, content = nil, &block)
       content = capture(&block) if block_given?
@@ -17,7 +9,6 @@ module ActionView
           #{content}
         <!-- END #{content_for_annotation} -->
        }      
-       content_for_callers << { :content_for_name => name, :file => file }
       content_for_without_annotation(name, content)
     end
 
