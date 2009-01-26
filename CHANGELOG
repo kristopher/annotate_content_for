@@ -1,1 +1,2 @@
 v0.0.1 Initial Release
+v1.0.0 Adds a content_for note if rails-footnotes plugin is being used.
