@@ -3,7 +3,7 @@ module ActionView::Helpers::CaptureHelper
   def content_for_with_annotation(name, content = nil, &block)
     content = capture(&block) if block_given?
     file = caller.detect do |file| 
-      file =~ /\/app\/views\// || file =~ /\/app\/helpers\//
+      file =~ /\/app\/views\// || file =~ /\/app\/helpers\// || TEST_ANNOTATE_CONTENT_FOR # a cheat so I don't have to figure out how to stub! caller
     end
     if file
       content_for_annotation = "content_for(#{name.inspect}) from: #{file.gsub(/:in\s+`.*/, '')}"
