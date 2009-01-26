@@ -2,9 +2,7 @@
   
 Annotates content_for captures with html comments containing the name, file and line number. 
 
-Optionally Adds a Content For Note to Footnotes if your using drnic's rails-footnotes plugin. 
-
-Rails-Footnotes:: http://github.com/drnic/rails-footnotes/tree/master  
+Optionally Adds a Content For Note to Footnotes if your using drnic's <a href=http://github.com/drnic/rails-footnotes/tree/master>rails-footnotes</a> plugin. 
 
 == Example
 
@@ -16,9 +14,9 @@ Note: Annotation is only added when in the development environment.
   
 "Some Content" would be annotated something like this.
   
-  <!-- START content_for(header) from: /rails_project/app/views/people/index.html.erb:18:in `_run_erb_app47views47people47index46html46erb' -->
+  <!-- START content_for(header) from: /rails_project/app/views/people/index.html.erb:18:in -->
     Some Content
-  <!-- END content_for(header) from: /rails_project/app/views/people/index.html.erb:18:in `_run_erb_app47views47people47index46html46erb' -->
+  <!-- END content_for(header) from: /rails_project/app/views/people/index.html.erb:18:in -->
 
 To include a content_for block without annotation.
 
