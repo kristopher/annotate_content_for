@@ -3,7 +3,8 @@
 Annotates content_for captures with html comments containing the name, file and line number. 
 
 Optionally Adds a Content For Note to Footnotes if your using drnic's rails-footnotes plugin. 
-  http://github.com/drnic/rails-footnotes/tree/master  
+
+Rails-Footnotes:: http://github.com/drnic/rails-footnotes/tree/master  
 
 == Example
 
