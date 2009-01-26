@@ -3,7 +3,6 @@
 Annotates content_for captures with html comments containing the name, file and line number. 
 
 Optionally Adds a Content For Note to Footnotes if your using drnic's rails-footnotes plugin. 
-  http://github.com/drnic/rails-footnotes/tree/master
 
 == Example
 
@@ -25,7 +24,7 @@ To include a content_for block without annotation.
     Some Script
   <% end %>
 
-To add the content_for note add this to the end of your environment.rb
+To add the content_for note, add this to the end of your environment.rb
 
   Footnotes::Filter.notes += [:content_for]
 
