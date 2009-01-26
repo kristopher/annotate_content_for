@@ -26,7 +26,8 @@ module Footnotes
       protected
         def parse_files!
           @template.content_for_callers.collect do |caller|
-            %Q{<a href="#{Footnotes::Filter.prefix}#{caller[:file].gsub(/:.*/, '')}&line=#{caller[:file].match(/:(\d*):/)[1]}">content_for(:#{caller[:content_for_name]}) from: #{caller[:file].gsub(/:in$/, '')}</a>}
+              %Q{<a href="#{Footnotes::Filter.prefix(caller[:file].gsub(/:.*/, ''), caller[:file].match(/:(\d*):/)[1], 0)}">content_for(:#{caller[:content_for_name]}) from: #{caller[:file].gsub(/:in$/, '')}</a>}
+            end
           end        
         end
     end

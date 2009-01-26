@@ -2,8 +2,6 @@
   
 Annotates content_for captures with html comments containing the name, file and line number. 
 
-Optionally Adds a Content For Note to Footnotes if your using drnic's rails-footnotes plugin. 
-
 == Example
 
 Note: Annotation is only added when in the development environment.
@@ -23,10 +21,6 @@ To include a content_for block without annotation.
   <% content_for_without_annotation :scripts do %>
     Some Script
   <% end %>
-
-To add the content_for note, add this to the end of your environment.rb
-
-  Footnotes::Filter.notes += [:content_for]
 
 Homepage:: http://github.com/kristopher/ajaxparty
 License:: Copyright (c) 2008 Kristopher Chambers <maito:kristopher.chambers@gmail.com> and Elijah Miller <mailto:elijah.miller@gmail.com>, released under the MIT license
